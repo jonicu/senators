@@ -1,0 +1,14 @@
+import json, urllib
+
+congress_url = "https://www.govtrack.us/api/v2/role?current=true"
+
+data = urllib.urlopen(congress_url).read()
+allcongress_data = json.loads(data)
+
+#and then I almost stop copying Jordan so we go trial and error
+
+output = ""
+for congressman in allcongress_data["objects"]
+  if current["current"] == "true"
+  output = output + ["role_type_label"] + " " + ["firstname"] + " " + ["lastname"] + " of the " + ["party"] + " party, "
+print(output)
