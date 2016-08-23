@@ -6,7 +6,15 @@ data = urllib.urlopen(congress_url).read()
 allcongress_data = json.loads(data)
 
 output = ""
+<<<<<<< Updated upstream
 for congressman in allcongress_data["objects"]:
   if current("current") == "true":
     output = output + ["role_type_label"] + " " + ["firstname"] + " " + ["lastname"] + " of the " + ["party"] + " party, "
 print(output)
+=======
+<<<<<<< HEAD
+for congressman in allcongress_data["objects”]:
+  if current["current"] == "true”:
+  output = output + ["role_type_label"] + " " + ["firstname"] + " " + ["lastname"] + " of the " + ["party"] + " party, "
+print(output)
+>>>>>>> Stashed changes
